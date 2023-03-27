@@ -14,9 +14,9 @@ export default {
 }
 </script>
 <template>
-    <section class="px-3 row">
-        <div class="col-3" v-for="card in store.cards">
-            <SingleCard :img="card.card_images[0].image_url" :name="card.name" :type="card.type" />
+    <section class="px-3 row g-3">
+        <div class="col-2 text-center" v-for="card in store.maxShow">
+            <SingleCard :img="card.card_images[0].image_url_small" :name="card.name" :type="card.type" />
         </div>
     </section>
 </template>

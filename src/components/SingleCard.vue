@@ -12,7 +12,9 @@ export default {
 <template>
     <div>
         <div class="img"><img :src="img" class="img-fluid"></div>
-        <h4>{{ name }}</h4>
-        <div>{{ type }}</div>
+        <div class="bg-orange">
+            <h5>{{ name }}</h5>
+            <div>{{ type }}</div>
+        </div>
     </div>
 </template>

@@ -1,2 +1,7 @@
 // Import all of Bootstrap's CSS
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}

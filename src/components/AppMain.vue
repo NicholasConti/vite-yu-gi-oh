@@ -10,13 +10,9 @@ export default {
 }
 </script>
 <template>
-    <main>
+    <main class="bg-orange">
         <NavMain />
         <CardsMain />
     </main>
 </template>
-<style lang="scss" scoped>
-main {
-    background-color: #d48f38;
-}
-</style>
+<style lang="scss" scoped></style>

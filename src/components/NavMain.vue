@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <div class="container py-4">
+    <div class="container p-4">
         <select>
             <option selected>Open this select menu</option>
             <option value="1">One</option>

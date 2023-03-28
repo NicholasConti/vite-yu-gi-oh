@@ -13,11 +13,27 @@ export default {
             store
         }
     },
+    methods: {
+        search() {
+            if (store.archetype !== '') {
+                axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
+                    params: {
+                        archetype: store.archetype
+                    }
+                })
+                    .then((response) => {
+                        this.store.cards = response.data.data;
+                    })
+            } else {
+                axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+                    .then((response) => {
+                        this.store.cards = response.data.data;
+                    })
+            }
+        }
+    },
     created() {
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
-            .then((response) => {
-                this.store.cards = response.data.data;
-            })
+        this.search();
     }
 }
 </script>

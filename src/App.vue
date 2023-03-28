@@ -23,16 +23,27 @@ export default {
                 })
                     .then((response) => {
                         this.store.cards = response.data.data;
+                        this.store.counter = response.data.data.length;
                     })
             } else {
                 axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
                     .then((response) => {
                         this.store.cards = response.data.data;
+                        this.store.counter = response.data.data.length;
                     })
             }
+
+        },
+        listArchtypes() {
+            axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+                .then((response) => {
+                    this.store.selectArchtypes = response.data;
+                    console.log(this.store.selectArchtypes);
+                })
         }
     },
     created() {
+        this.listArchtypes();
         this.search();
     }
 }

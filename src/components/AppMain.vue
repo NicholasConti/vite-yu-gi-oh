@@ -21,4 +21,8 @@ export default {
         <CardsMain />
     </main>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+    min-height: 100vh;
+}
+</style>

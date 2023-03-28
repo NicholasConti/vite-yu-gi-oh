@@ -1,15 +1,21 @@
 <script>
+import { store } from '../store';
 export default {
-    name: 'Nav'
+    name: 'Nav',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 <template>
     <div class="container p-4">
-        <select>
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+        <select v-model="store.archetype" @change.prevent="$emit('selectArchtype')">
+            <option selected value="">Select an archetype</option>
+            <option>Crystal Beast</option>
+            <option>Elemental HERO</option>
+            <option>Blue-Eyes</option>
         </select>
     </div>
 </template>

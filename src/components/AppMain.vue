@@ -6,12 +6,18 @@ export default {
     components: {
         NavMain,
         CardsMain
+    },
+    methods: {
+        handleSearch() {
+            console.log('ho ascoltato questo evento');
+            this.$emit('filterCards');
+        }
     }
 }
 </script>
 <template>
     <main class="bg-orange">
-        <NavMain />
+        <NavMain @selectArchtype="handleSearch" />
         <CardsMain />
     </main>
 </template>
